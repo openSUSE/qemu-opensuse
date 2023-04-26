@@ -16,15 +16,10 @@
 #
 
 
-%global flavor @BUILD_FLAVOR@%{nil}
 %define name_suffix %{nil}
-
-%if "%{flavor}" == "linux-user"
-%define name_suffix -linux-user
-%define summary_string CPU emulator for user space
-%else
 %define summary_string Machine emulator and virtualizer
-%endif
+#%define name_suffix -linux-user
+#%define summary_string CPU emulator for user space
 
 %define _buildshell /bin/bash
 
